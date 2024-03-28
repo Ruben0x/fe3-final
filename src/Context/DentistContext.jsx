@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useEffect, useReducer } from 'react';
-import { dentistReducer } from '../Components/Reducers/dentistReducer';
+import { dentistReducer } from '../Reducers/dentistReducer';
 import axios from 'axios';
 
 const DentistStates = createContext();
 
 const initialState = {
-  theme: 'dark',
+  theme: '',
   data: {
     dentistList: [],
     dentistSelected: {},

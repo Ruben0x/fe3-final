@@ -28,15 +28,15 @@ const Card = ({ item }) => {
       <Link to={'/dentist/' + item.id}>
         <h3>{item.name}</h3>
         <p>{item.username}</p>
-        <img src={doctor} alt='' />
       </Link>
+      <img src={doctor} alt='' />
       {location.pathname == '/' ? (
         <button onClick={addFav} className='favButton'>
-          Add fav
+          💖 Add fav
         </button>
       ) : (
         <button onClick={deleteFav} className='favButton'>
-          Delete Fav
+          ❌ Delete Fav
         </button>
       )}
     </div>

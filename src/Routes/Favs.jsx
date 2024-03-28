@@ -8,7 +8,7 @@ const Favs = () => {
   const { state } = useDentistStates();
   const dentistFavs = state.data.dentistFavs;
   return (
-    <div className={state.theme}>
+    <main className={state.theme}>
       <h1>Dentists Favs</h1>
       <div className='card-grid'>
         {/* este componente debe consumir los destacados del localStorage */}
@@ -18,7 +18,7 @@ const Favs = () => {
           <Card key={favs.id} item={favs} />
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -19,7 +19,7 @@ const Detail = () => {
 
   return (
     <>
-      <div className={state.theme}>
+      <main className={state.theme}>
         <h1>Detail Dentist id </h1>
         {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
         {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
@@ -41,7 +41,7 @@ const Detail = () => {
             </tr>
           </tbody>
         </table>
-      </div>
+      </main>
     </>
   );
 };
