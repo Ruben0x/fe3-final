@@ -5,12 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.App {
+  /* display: flex;
+  flex-direction: column; */
+  /* min-height: 100vh; */
 }
 
 main {
   padding: 3% 5%;
+  /* height: 100%; */
+  /* margin: 0; */
+
+  /* min-height: 70vh; */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
 code {
@@ -18,8 +30,8 @@ code {
     monospace;
 }
 .favButton {
-  background-color: rgba(136, 136, 136, 0.116);
-  margin: 5px;
+  background-color: rgba(255, 85, 85, 0.116);
+  margin: 10px;
   padding: 10px;
   border: 1px solid black;
   width: 70%;
@@ -30,7 +42,7 @@ code {
   transition: all 0.15s ease;
 }
 .favButton:hover {
-  background-color: rgba(255, 238, 2, 0.979);
+  background-color: rgba(233, 232, 216, 0.979);
 }
 
 h1 {
@@ -42,11 +54,15 @@ h1 {
 nav {
   display: flex;
   width: auto;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem;
+  font-size: larger;
   /* border-bottom: 1px solid black; */
   background-color: rgb(105, 210, 236);
+}
+nav.dark {
+  background: #000;
 }
 
 a {
@@ -56,7 +72,8 @@ a {
   cursor: pointer;
 }
 a:hover {
-  color: rgb(136, 136, 136);
+  /* color: rgb(2, 84, 236); */
+  text-decoration: underline;
 }
 
 footer {
@@ -64,17 +81,23 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 2rem;
-  position: relative;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* margin-bottom: 0; */
+  margin-top: auto;
   width: auto;
   height: 40px;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   background-color: rgb(105, 210, 236);
+}
+footer.dark {
+  background-color: #000;
 }
 
 footer > img {
   width: 200px;
-  margin: 0;
+  margin: 0 10px;
+  background-color: #ffffff;
 }
 footer > p {
   margin: 0;
@@ -102,13 +125,14 @@ form {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 3%;
   img {
+    padding-bottom: 10px;
     width: 80%;
     align-items: center;
   }
 }
 
 .card:hover {
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(224, 224, 221);
 }
 
 .card-grid {
@@ -141,9 +165,22 @@ tr:nth-child(even) {
 }
 
 .dark {
-  background-color: #12121296;
+  background-color: gray;
   color: white;
 }
 .dark > a {
   color: white;
+}
+
+.dark > button {
+  color: white;
+}
+
+.dark > button:hover {
+  color: #000;
+}
+
+.themesvg {
+  height: 30px;
+  cursor: pointer;
 }

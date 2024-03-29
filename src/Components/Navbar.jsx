@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useDentistStates } from '../Context/DentistContext';
 import DH from '../img/DH.ico';
+import darkmode from '../img/darkmode.svg';
+import lightmode from '../img/lightmode.svg';
 
 const Navbar = () => {
   const { state, dispatch } = useDentistStates();
@@ -17,7 +19,16 @@ const Navbar = () => {
       <Link to={'/contacto'}>Contacto</Link>
       <Link to={'/favs'}>Favs</Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTheme}>Change theme</button>
+      {state.theme === '' ? (
+        <img className='themesvg' src={darkmode} onClick={toggleTheme} alt='' />
+      ) : (
+        <img
+          className='themesvg'
+          src={lightmode}
+          onClick={toggleTheme}
+          alt=''
+        />
+      )}
     </nav>
   );
 };

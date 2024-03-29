@@ -24,7 +24,7 @@ const Card = ({ item }) => {
   };
 
   return (
-    <div className='card'>
+    <div className={`card + ${state.theme}`}>
       <Link to={'/dentist/' + item.id}>
         <h3>{item.name}</h3>
         <p>{item.username}</p>
